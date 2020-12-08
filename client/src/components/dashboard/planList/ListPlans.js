@@ -8,7 +8,7 @@ const ListPlans = ({allPlans, setAccountsChange}) => {
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:5000/plans/${id}`, {
+            await fetch(`/plans/${id}`, {
                 method: "DELETE",
                 headers: {token : localStorage.token} 
             })

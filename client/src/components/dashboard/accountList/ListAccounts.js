@@ -8,7 +8,7 @@ const ListAccounts = ({allAccounts, setAccountsChange}) => {
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:5000/dashboard/accounts/${id}`, {
+            await fetch(`/dashboard/accounts/${id}`, {
                 method: "DELETE",
                 headers: {token : localStorage.token} 
             })

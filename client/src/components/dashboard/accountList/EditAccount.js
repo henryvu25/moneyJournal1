@@ -11,7 +11,7 @@ const EditAccounts = ({ account, setAccountsChange }) => {
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("token", localStorage.token);
 
-            await fetch(`http://localhost:5000/dashboard/accounts/${id}`, {
+            await fetch(`/dashboard/accounts/${id}`, {
                 method: "PUT",
                 headers: myHeaders,
                 body: JSON.stringify({nickname, balance})

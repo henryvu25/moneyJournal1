@@ -14,7 +14,7 @@ const Bills = ({setAuth}) => {
     
     const getName = async () => {
         try {
-            const response = await fetch("http://localhost:5000/bills/", {
+            const response = await fetch("/bills/", {
                 method: "GET",
                 headers: {token : localStorage.token}
             });

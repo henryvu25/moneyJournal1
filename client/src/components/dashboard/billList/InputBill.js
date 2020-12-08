@@ -15,7 +15,7 @@ const InputBills = ({setAccountsChange}) => {
             myHeaders.append("token", localStorage.token);
 
 
-            const response = await fetch("http://localhost:5000/bills/", {
+            const response = await fetch("/bills/", {
                 method: "POST",
                 headers: myHeaders,
                 body: JSON.stringify({nickname, amount_due, due_date})

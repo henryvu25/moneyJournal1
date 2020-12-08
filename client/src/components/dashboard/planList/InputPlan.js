@@ -15,7 +15,7 @@ const InputPlans = ({setAccountsChange}) => {
             myHeaders.append("token", localStorage.token);
 
 
-            const response = await fetch("http://localhost:5000/plans/", {
+            const response = await fetch("/plans/", {
                 method: "POST",
                 headers: myHeaders,
                 body: JSON.stringify({nickname, goal_amount, goal_date})

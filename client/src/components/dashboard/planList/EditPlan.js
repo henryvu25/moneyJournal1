@@ -12,7 +12,7 @@ const EditPlan = ({ plan, setAccountsChange }) => {
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("token", localStorage.token);
 
-            await fetch(`http://localhost:5000/plans/${id}`, {
+            await fetch(`/plans/${id}`, {
                 method: "PUT",
                 headers: myHeaders,
                 body: JSON.stringify({nickname, goal_amount, goal_date})

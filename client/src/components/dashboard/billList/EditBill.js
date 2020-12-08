@@ -12,7 +12,7 @@ const EditBill = ({ bill, setAccountsChange }) => {
             myHeaders.append("Content-Type", "application/json");
             myHeaders.append("token", localStorage.token);
 
-            await fetch(`http://localhost:5000/bills/${id}`, {
+            await fetch(`/bills/${id}`, {
                 method: "PUT",
                 headers: myHeaders,
                 body: JSON.stringify({nickname, amount_due, due_date})

@@ -14,7 +14,7 @@ const Plans = ({setAuth}) => {
     
     const getName = async () => {
         try {
-            const response = await fetch("http://localhost:5000/plans/", {
+            const response = await fetch("/plans/", {
                 method: "GET",
                 headers: {token : localStorage.token}
             });

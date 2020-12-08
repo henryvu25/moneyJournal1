@@ -14,7 +14,7 @@ const InputAccounts = ({setAccountsChange}) => {
             myHeaders.append("token", localStorage.token);
 
 
-            await fetch("http://localhost:5000/dashboard/accounts", {
+            await fetch("/dashboard/accounts", {
                 method: "POST",
                 headers: myHeaders,
                 body: JSON.stringify({nickname, balance})
